@@ -112,5 +112,18 @@
         (reg) |= ((uint32_t)(val) << (4U * (bit))); \
     } while (0)
 
+/******************************************
+ * GPIO REGISTER ACCESS MACROS 
+ ******************************************/
+#define GPIO_MODER(port)         REG32((port) + GPIO_MODER_OFFSET)
+#define GPIO_OTYPER(port)        REG32((port) + GPIO_OTYPER_OFFSET)
+#define GPIO_OSPEEDR(port)       REG32((port) + GPIO_OSPEEDR_OFFSET)
+#define GPIO_PUPDR(port)         REG32((port) + GPIO_PUPDR_OFFSET)
+#define GPIO_IDR(port)           REG32((port) + GPIO_IDR_OFFSET)
+#define GPIO_ODR(port)           REG32((port) + GPIO_ODR_OFFSET)   
+#define GPIO_BSRR(port)          REG32((port) + GPIO_BSRR_OFFSET)
+#define GPIO_AFRL(port)          REG32((port) + GPIO_AFRL_OFFSET)
+#define GPIO_AFRH(port)          REG32((port) + GPIO_AFRH_OFFSET)
+
 
 #endif /* REG_DEF_H */
